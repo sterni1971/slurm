@@ -2409,9 +2409,9 @@ static int _id_from_stepstr(char *str) {
 	if (end == str) {
 		if (!strcasecmp(str, "TBD"))
 			id = SLURM_PENDING_STEP;
-		else if (!strcasecmp(str, "batch"))
+		else if (!strcasecmp(str, "Batch"))
 			id = SLURM_BATCH_SCRIPT;
-		else if (!strcasecmp(str, "extern"))
+		else if (!strcasecmp(str, "Extern"))
 			id = SLURM_EXTERN_CONT;
 		else
 			id = NO_VAL;
@@ -2420,13 +2420,13 @@ static int _id_from_stepstr(char *str) {
 }
 
 static void _stepstr_from_step(job_step_info_t *step_ptr, char *dest,
-			     uint32_t len) {
+			       uint32_t len) {
 	if (step_ptr->step_id == SLURM_PENDING_STEP)
 		snprintf(dest, len, "TBD");
 	else if (step_ptr->step_id == SLURM_EXTERN_CONT)
-		snprintf(dest, len, "extern");
+		snprintf(dest, len, "Extern");
 	else if (step_ptr->step_id == SLURM_BATCH_SCRIPT)
-		snprintf(dest, len, "batch");
+		snprintf(dest, len, "Batch");
 	else
 		snprintf(dest, len, "%u",
 			 step_ptr->step_id);
