@@ -2437,7 +2437,7 @@ static void _layout_step_record(GtkTreeView *treeview,
 				int update, bool suspended)
 {
 	char *uname;
-	char tmp_char[50], tmp_str[50], tmp_nodes[50], tmp_time[50];
+	char tmp_char[100], tmp_str[50], tmp_nodes[50], tmp_time[50];
 	GtkTreeIter iter;
 	uint32_t state;
 	GtkTreeStore *treestore =
