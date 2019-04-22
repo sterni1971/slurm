@@ -28,6 +28,7 @@ documents those changes that are of interest to users and administrators.
     when not the head job.
  -- Fix unnecessary reloading of job submit plugins.
  -- Fix segfault when loading/unloading Lua job submit plugin multiple times.
+ -- Fix printing duplicate error messages of jobs rejected by job submit plugin.
 
 * Changes in Slurm 18.08.7
 ==========================
