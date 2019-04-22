@@ -27,6 +27,7 @@ documents those changes that are of interest to users and administrators.
  -- Fix issue with backfill scheduler scheduling tasks of an array
     when not the head job.
  -- Fix unnecessary reloading of job submit plugins.
+ -- Fix segfault when loading/unloading Lua job submit plugin multiple times.
 
 * Changes in Slurm 18.08.7
 ==========================
